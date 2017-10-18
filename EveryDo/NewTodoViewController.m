@@ -9,6 +9,7 @@
 #import "NewTodoViewController.h"
 
 @interface NewTodoViewController ()
+- (IBAction)cancelNewTodo:(UIBarButtonItem *)sender;
 
 @end
 
@@ -34,4 +35,7 @@
 }
 */
 
+- (IBAction)cancelNewTodo:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

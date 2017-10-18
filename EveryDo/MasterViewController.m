@@ -31,13 +31,11 @@
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getNewTodoInput:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
 
-- (void)viewWillAppear:(BOOL)animated {
-}
 
 
 - (void)didReceiveMemoryWarning {
@@ -47,18 +45,16 @@
 
 
 - (void)insertNewObject:(id)sender {
-    if (!self.todoManager) {
-        self.todoManager = [TodoManager new];
-    }
-    
-    NewTodoViewController *newTodoVC = [NewTodoViewController new];
-    
-    [self showViewController:newTodoVC sender:sender];
+   
     
     //[self.todoManager insertObject:[NSDate date] atIndex:0];
     
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 //    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)getNewTodoInput:(id)sender {
+    [self performSegueWithIdentifier:@"newTaskSegue" sender:sender];
 }
 
 

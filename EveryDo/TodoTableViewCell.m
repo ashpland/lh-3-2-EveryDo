@@ -44,7 +44,7 @@
         
         self.titleLabel.attributedText = attTitle;
         self.descriptionLabel.attributedText = attDescription;
-        self.priorityLabel.text = @"";
+        self.priorityLabel.text = @"✔️";
         
         
     } else {
