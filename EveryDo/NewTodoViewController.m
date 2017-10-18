@@ -10,6 +10,11 @@
 
 @interface NewTodoViewController ()
 - (IBAction)cancelNewTodo:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+- (IBAction)createNewTodo:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *priorityPicker;
 
 @end
 
@@ -17,25 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self finishUISetup];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:NSSelectorFromString(@"textChanged") name:UITextFieldTextDidChangeNotification object:nil];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)finishUISetup
+{
+    self.descriptionTextView.layer.borderColor = self.titleTextField.layer.borderColor;
+    self.descriptionTextView.layer.borderWidth = self.titleTextField.layer.borderWidth;
+    self.descriptionTextView.layer.cornerRadius = self.titleTextField.layer.cornerRadius;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)textChanged
+{
+    self.doneButton.enabled = [self.titleTextField hasText] ? YES : NO;   
 }
-*/
+
 
 - (IBAction)cancelNewTodo:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)createNewTodo:(UIBarButtonItem *)sender {
+    NSString *todoTitle = self.titleTextField.text;
+    NSString *todoDescription = self.descriptionTextView.text;
+    NSInteger priorityChoice =  self.priorityPicker.selectedSegmentIndex;
+    
+    NSLog(@"%@ - %@ - %ld", todoTitle, todoDescription, (long)priorityChoice);
+    
+    
+    
 }
 @end
