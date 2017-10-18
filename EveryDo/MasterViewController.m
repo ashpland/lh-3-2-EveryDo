@@ -45,12 +45,8 @@
 
 
 - (void)insertNewObject:(id)sender {
-   
-    
-    //[self.todoManager insertObject:[NSDate date] atIndex:0];
-    
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)getNewTodoInput:(id)sender {
@@ -66,7 +62,12 @@
         Todo *selectedTodo = self.todoManager.todoList[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setTodo:selectedTodo];
+    } else if ([[segue identifier] isEqualToString:@"newTaskSegue"]) {
+        NewTodoViewController *controller = (NewTodoViewController *)[segue destinationViewController];
+        controller.delegate = self;
+        NSLog(@"%@", controller.delegate);
     }
+
 }
 
 
@@ -110,5 +111,12 @@
     }
 }
 
+-(void)createNewTodoWithTitle:(NSString *)title andDescription:(NSString *)todoDescription andPriority:(NSInteger)priority
+{
+    [self.todoManager addNewTodoWithTitle:title andDescription:todoDescription andPriority:(TodoPriority)priority];
+    [self dismissViewControllerAnimated:YES completion:^(){
+        [self insertNewObject:nil];
+    }];
+}
 
 @end

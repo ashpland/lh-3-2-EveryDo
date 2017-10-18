@@ -12,9 +12,6 @@
 - (IBAction)cancelNewTodo:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 - (IBAction)createNewTodo:(UIBarButtonItem *)sender;
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *priorityPicker;
 
 @end
 
@@ -46,13 +43,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)createNewTodo:(UIBarButtonItem *)sender {
-    NSString *todoTitle = self.titleTextField.text;
-    NSString *todoDescription = self.descriptionTextView.text;
-    NSInteger priorityChoice =  self.priorityPicker.selectedSegmentIndex;
-    
-    NSLog(@"%@ - %@ - %ld", todoTitle, todoDescription, (long)priorityChoice);
-    
-    
-    
+    if (self.delegate)
+        [self.delegate createNewTodoWithTitle:self.titleTextField.text
+                         andDescription:self.descriptionTextView.text
+                            andPriority:self.priorityPicker.selectedSegmentIndex];
 }
 @end

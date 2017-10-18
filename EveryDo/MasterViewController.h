@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewTodoViewController.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <UITableViewDelegate>
+@interface MasterViewController : UITableViewController <NewTodoViewControllerDelegate>
 
 
 @end

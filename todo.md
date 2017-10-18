@@ -11,13 +11,13 @@
 - [x] View Details
 - [ ] Add new item
    - [x] UI
-   - [ ] implement NewTodoViewController
-   - [ ] Make protocol
-   - [ ] Make MasterVC conform to protocol
-      - [ ] Add to data model
-      - [ ] Dismiss view controller
-         - [ ] Addobject in completion block
-   - [x] In segue: create NewTodoVC, assign MasterVC as delegate
+   - [x] implement NewTodoViewController
+   - [x] Make protocol
+   - [x] Make MasterVC conform to protocol
+      - [x] Add to data model
+      - [x] Dismiss view controller
+         - [x] Addobject in completion block
+   - [ ] In segue: create NewTodoVC, assign MasterVC as delegate
 - [ ] Cross off swipe
 - [ ] Delete todo
 
