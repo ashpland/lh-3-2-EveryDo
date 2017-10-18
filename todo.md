@@ -19,5 +19,5 @@
          - [x] Addobject in completion block
    - [x] In segue: create NewTodoVC, assign MasterVC as delegate
 - [x] Cross off swipe
-- [ ] Delete todo
+- [x] Delete todo
 

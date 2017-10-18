@@ -49,7 +49,12 @@
 
 -(void)changeStatusForTodoAt:(NSUInteger)arrayIndex
 {
-    [[self.todoList objectAtIndex:arrayIndex] changeStatus];
+    [[self.internalTodoList objectAtIndex:arrayIndex] changeStatus];
+}
+
+-(void)removeTodoAt:(NSUInteger)arrayIndex
+{
+    [self.internalTodoList removeObjectAtIndex:arrayIndex];
 }
 
 
