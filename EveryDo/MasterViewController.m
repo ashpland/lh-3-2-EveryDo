@@ -8,10 +8,13 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "TodoManager.h"
+#import "TodoTableViewCell.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property (nonatomic, strong) TodoManager *todoManager;
 @end
 
 @implementation MasterViewController
@@ -19,6 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.todoManager = [TodoManager new];
+    
+    [self.todoManager addSampleData];
+    
+    
+    
+    
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
@@ -66,16 +78,20 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    
+//    return self.objects.count;
+    return self.todoManager.todoList.count;
+    
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    TodoTableViewCell *newCell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
-    return cell;
+    newCell.todo = self.todoManager.todoList[indexPath.row];
+
+    return newCell;
 }
 
 

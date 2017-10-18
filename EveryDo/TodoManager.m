@@ -53,6 +53,7 @@
     [self addNewTodoWithTitle:@"Figure out layout bug" andDescription:@"It's probably translatesAutoresizingMaskIntoConstraints"  andPriority:Medium];
     [self addNewTodoWithTitle:@"Samhain prep" andDescription:@"💀🔮🎃" andPriority:Medium];
     [self addNewTodoWithTitle:@"Take out compost" andDescription:@"" andPriority:High];
+    self.todoList[1].isCompleted = YES;
 }
 
 

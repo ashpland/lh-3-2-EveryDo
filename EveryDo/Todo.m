@@ -33,7 +33,7 @@
 {
     switch (self.todoPriority) {
         case Low:
-            return @"";
+            return @" ";
         case Medium:
             return @"❗️";
         case High:
