@@ -14,6 +14,7 @@
 		493694DD1F96E31F00574695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493694DC1F96E31F00574695 /* Assets.xcassets */; };
 		493694E01F96E31F00574695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493694DE1F96E31F00574695 /* LaunchScreen.storyboard */; };
 		493694E31F96E31F00574695 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694E21F96E31F00574695 /* main.m */; };
+		493694EB1F96E48000574695 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694EA1F96E48000574695 /* Todo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		493694DF1F96E31F00574695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		493694E11F96E31F00574695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493694E21F96E31F00574695 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		493694E91F96E48000574695 /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		493694EA1F96E48000574695 /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				493694D61F96E31F00574695 /* DetailViewController.h */,
 				493694D71F96E31F00574695 /* DetailViewController.m */,
 				493694D91F96E31F00574695 /* Main.storyboard */,
+				493694E91F96E48000574695 /* Todo.h */,
+				493694EA1F96E48000574695 /* Todo.m */,
 				493694DC1F96E31F00574695 /* Assets.xcassets */,
 				493694DE1F96E31F00574695 /* LaunchScreen.storyboard */,
 				493694E11F96E31F00574695 /* Info.plist */,
@@ -147,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493694EB1F96E48000574695 /* Todo.m in Sources */,
 				493694D51F96E31F00574695 /* MasterViewController.m in Sources */,
 				493694D21F96E31F00574695 /* AppDelegate.m in Sources */,
 				493694E31F96E31F00574695 /* main.m in Sources */,
