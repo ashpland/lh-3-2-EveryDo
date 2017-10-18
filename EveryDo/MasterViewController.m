@@ -63,11 +63,12 @@
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setTodo:selectedTodo];
     } else if ([[segue identifier] isEqualToString:@"newTaskSegue"]) {
-        NewTodoViewController *controller = (NewTodoViewController *)[segue destinationViewController];
+        UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
+        NewTodoViewController *controller =  (NewTodoViewController *)navController.topViewController;
+        
         controller.delegate = self;
         NSLog(@"%@", controller.delegate);
     }
-
 }
 
 

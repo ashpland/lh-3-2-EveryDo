@@ -20,18 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self finishUISetup];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:NSSelectorFromString(@"textChanged") name:UITextFieldTextDidChangeNotification object:nil];
-
 }
 
-- (void)finishUISetup
-{
-    self.descriptionTextView.layer.borderColor = self.titleTextField.layer.borderColor;
-    self.descriptionTextView.layer.borderWidth = self.titleTextField.layer.borderWidth;
-    self.descriptionTextView.layer.cornerRadius = self.titleTextField.layer.cornerRadius;
-}
 
 - (void)textChanged
 {
