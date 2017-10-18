@@ -17,7 +17,7 @@
       - [x] Add to data model
       - [x] Dismiss view controller
          - [x] Addobject in completion block
-   - [ ] In segue: create NewTodoVC, assign MasterVC as delegate
-- [ ] Cross off swipe
+   - [x] In segue: create NewTodoVC, assign MasterVC as delegate
+- [x] Cross off swipe
 - [ ] Delete todo
 

@@ -25,5 +25,6 @@ typedef NS_ENUM(NSUInteger, TodoPriority) {
 @property (nonatomic, strong, readonly) NSString *checkbox;
 @property (nonatomic, strong, readonly) NSString *priorityIcon;
 
+- (void)changeStatus;
 
 @end

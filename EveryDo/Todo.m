@@ -47,5 +47,10 @@
     return [NSString stringWithFormat:@"%@ %@%@ - %@", self.checkbox, self.priorityIcon, self.title, self.todoDescription];
 }
 
+-(void)changeStatus
+{
+    self.isCompleted = !self.isCompleted;
+}
+
 
 @end

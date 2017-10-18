@@ -16,4 +16,6 @@
 - (void)addNewTodoWithTitle:(NSString *)title andDescription:(NSString *)description andPriority:(TodoPriority)priority;
 - (void)addSampleData;
 
+-(void)changeStatusForTodoAt:(NSUInteger)arrayIndex;
+
 @end

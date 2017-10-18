@@ -16,6 +16,7 @@
 
 @property NSMutableArray *objects;
 @property (nonatomic, strong) TodoManager *todoManager;
+- (IBAction)todoSwiped:(UISwipeGestureRecognizer *)sender;
 @end
 
 @implementation MasterViewController
@@ -120,4 +121,13 @@
     }];
 }
 
+- (IBAction)todoSwiped:(UISwipeGestureRecognizer *)sender {
+    
+    NSIndexPath *swipeIndex = [self.tableView indexPathForRowAtPoint:[sender locationInView:self.view]];
+    
+    [self.todoManager changeStatusForTodoAt:swipeIndex.row];
+    
+    [self.tableView reloadRowsAtIndexPaths:@[swipeIndex] withRowAnimation:UITableViewRowAnimationFade];
+    
+}
 @end

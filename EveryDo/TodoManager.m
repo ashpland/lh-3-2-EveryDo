@@ -47,6 +47,12 @@
 }
 
 
+-(void)changeStatusForTodoAt:(NSUInteger)arrayIndex
+{
+    [[self.todoList objectAtIndex:arrayIndex] changeStatus];
+}
+
+
 -(void)addSampleData
 {
     [self addNewTodoWithTitle:@"A really long title to see what happens when it has a really long title" andDescription:@"But the description is short." andPriority:Low];
@@ -61,6 +67,9 @@
     self.todoList[1].isCompleted = YES;
     self.todoList[2].isCompleted = YES;
 }
+
+
+
 
 
 @end
