@@ -10,7 +10,7 @@
 - [x] Strikethrough
 - [x] View Details
 - [ ] Add new item
-	- [ ] UI
+	- [x] UI
 	- [ ] Wiring
 - [ ] Cross off swipe
 - [ ] Delete todo

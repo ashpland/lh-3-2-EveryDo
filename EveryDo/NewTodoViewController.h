@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  NewTodoViewController.h
 //  EveryDo
 //
 //  Created by Andrew on 2017-10-17.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
-
-@interface MasterViewController : UITableViewController <UITableViewDelegate>
-
+@interface NewTodoViewController : UIViewController
 
 @end
-

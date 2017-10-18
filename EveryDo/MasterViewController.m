@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "TodoManager.h"
 #import "TodoTableViewCell.h"
+#import "NewTodoViewController.h"
 
 @interface MasterViewController ()
 
@@ -26,9 +27,6 @@
     self.todoManager = [TodoManager new];
     
     [self.todoManager addSampleData];
-    
-    
-    
     
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -49,12 +47,18 @@
 
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+    if (!self.todoManager) {
+        self.todoManager = [TodoManager new];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    NewTodoViewController *newTodoVC = [NewTodoViewController new];
+    
+    [self showViewController:newTodoVC sender:sender];
+    
+    //[self.todoManager insertObject:[NSDate date] atIndex:0];
+    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 

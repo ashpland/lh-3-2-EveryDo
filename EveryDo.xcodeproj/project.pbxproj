@@ -17,6 +17,7 @@
 		493694EB1F96E48000574695 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694EA1F96E48000574695 /* Todo.m */; };
 		493694F11F96E81000574695 /* TodoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694F01F96E81000574695 /* TodoManager.m */; };
 		493694F41F96EEAF00574695 /* TodoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694F31F96EEAF00574695 /* TodoTableViewCell.m */; };
+		493694F71F9714BA00574695 /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493694F61F9714BA00574695 /* NewTodoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		493694F01F96E81000574695 /* TodoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoManager.m; sourceTree = "<group>"; };
 		493694F21F96EEAF00574695 /* TodoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoTableViewCell.h; sourceTree = "<group>"; };
 		493694F31F96EEAF00574695 /* TodoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTableViewCell.m; sourceTree = "<group>"; };
+		493694F51F9714BA00574695 /* NewTodoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTodoViewController.h; sourceTree = "<group>"; };
+		493694F61F9714BA00574695 /* NewTodoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				493694D41F96E31F00574695 /* MasterViewController.m */,
 				493694D61F96E31F00574695 /* DetailViewController.h */,
 				493694D71F96E31F00574695 /* DetailViewController.m */,
+				493694F51F9714BA00574695 /* NewTodoViewController.h */,
+				493694F61F9714BA00574695 /* NewTodoViewController.m */,
 				493694F21F96EEAF00574695 /* TodoTableViewCell.h */,
 				493694F31F96EEAF00574695 /* TodoTableViewCell.m */,
 				493694D91F96E31F00574695 /* Main.storyboard */,
@@ -163,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				493694F41F96EEAF00574695 /* TodoTableViewCell.m in Sources */,
+				493694F71F9714BA00574695 /* NewTodoViewController.m in Sources */,
 				493694EB1F96E48000574695 /* Todo.m in Sources */,
 				493694D51F96E31F00574695 /* MasterViewController.m in Sources */,
 				493694D21F96E31F00574695 /* AppDelegate.m in Sources */,

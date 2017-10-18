@@ -42,20 +42,22 @@
     newTodo.todoDescription = description;
     newTodo.todoPriority = priority;
     
-    [self.internalTodoList addObject:newTodo];
+//    [self.internalTodoList addObject:newTodo];
+    [self.internalTodoList insertObject:newTodo atIndex:0];
 }
 
 
 -(void)addSampleData
 {
-    [self addNewTodoWithTitle:@"Go to the bank" andDescription:@"Deposit cheques and get some cash" andPriority:Medium];
-    [self addNewTodoWithTitle:@"Text Alex" andDescription:@"Send him some cute emojis" andPriority:High];
-    [self addNewTodoWithTitle:@"Figure out layout bug" andDescription:@"It's probably translatesAutoresizingMaskIntoConstraints"  andPriority:Medium];
-    [self addNewTodoWithTitle:@"Samhain prep" andDescription:@"💀🔮🎃" andPriority:Low];
-    [self addNewTodoWithTitle:@"Take out compost" andDescription:@"" andPriority:High];
-    [self addNewTodoWithTitle:@"Really verbose" andDescription:@"Cras facilisis fermentum sapien. Sed eu augue tincidunt magna feugiat dapibus. Pellentesque ultricies dapibus tempor. Etiam maximus, sem eu ullamcorper dapibus, lectus leo dapibus metus, tincidunt tempor nulla ligula vel dolor. Vestibulum lorem odio, auctor sit amet sapien in, blandit varius nisi. Vivamus pretium ligula vel augue faucibus, in scelerisque nibh gravida. Quisque cursus tortor ac dui feugiat, quis dapibus enim volutpat. Nullam vel purus consequat, ullamcorper erat et, vulputate nisi." andPriority:Low];
-    [self addNewTodoWithTitle:@"Repaint Nails" andDescription:@"💅🏽" andPriority:Medium];
     [self addNewTodoWithTitle:@"A really long title to see what happens when it has a really long title" andDescription:@"But the description is short." andPriority:Low];
+    [self addNewTodoWithTitle:@"Repaint Nails" andDescription:@"💅🏽" andPriority:Medium];
+    [self addNewTodoWithTitle:@"Really verbose" andDescription:@"Cras facilisis fermentum sapien. Sed eu augue tincidunt magna feugiat dapibus. Pellentesque ultricies dapibus tempor. Etiam maximus, sem eu ullamcorper dapibus, lectus leo dapibus metus, tincidunt tempor nulla ligula vel dolor. Vestibulum lorem odio, auctor sit amet sapien in, blandit varius nisi. Vivamus pretium ligula vel augue faucibus, in scelerisque nibh gravida. Quisque cursus tortor ac dui feugiat, quis dapibus enim volutpat. Nullam vel purus consequat, ullamcorper erat et, vulputate nisi." andPriority:Low];
+    [self addNewTodoWithTitle:@"Take out compost" andDescription:@"" andPriority:High];
+    [self addNewTodoWithTitle:@"Samhain prep" andDescription:@"💀🔮🎃" andPriority:Low];
+    [self addNewTodoWithTitle:@"Figure out layout bug" andDescription:@"It's probably translatesAutoresizingMaskIntoConstraints"  andPriority:Medium];
+    [self addNewTodoWithTitle:@"Text Alex" andDescription:@"Send him some cute emojis" andPriority:High];
+    [self addNewTodoWithTitle:@"Go to the bank" andDescription:@"Deposit cheques and get some cash" andPriority:Medium];
+
     self.todoList[1].isCompleted = YES;
     self.todoList[2].isCompleted = YES;
 }
