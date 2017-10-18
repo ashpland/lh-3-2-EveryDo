@@ -48,12 +48,13 @@
 
 -(void)addSampleData
 {
-    [self addNewTodoWithTitle:@"Go to the bank" andDescription:@"Deposit cheques and get some cash" andPriority:Low];
+    [self addNewTodoWithTitle:@"Go to the bank" andDescription:@"Deposit cheques and get some cash" andPriority:Medium];
     [self addNewTodoWithTitle:@"Text Alex" andDescription:@"Send him some cute emojis" andPriority:High];
     [self addNewTodoWithTitle:@"Figure out layout bug" andDescription:@"It's probably translatesAutoresizingMaskIntoConstraints"  andPriority:Medium];
-    [self addNewTodoWithTitle:@"Samhain prep" andDescription:@"💀🔮🎃" andPriority:Medium];
+    [self addNewTodoWithTitle:@"Samhain prep" andDescription:@"💀🔮🎃" andPriority:Low];
     [self addNewTodoWithTitle:@"Take out compost" andDescription:@"" andPriority:High];
     self.todoList[1].isCompleted = YES;
+    self.todoList[2].isCompleted = YES;
 }
 
 

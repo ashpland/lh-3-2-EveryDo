@@ -26,9 +26,33 @@
 -(void)setTodo:(Todo *)todo
 {
     _todo = todo;
-    self.titleLabel.text = todo.title;
-    self.descriptionLabel.text = todo.todoDescription;
-    self.priorityLabel.text = todo.priorityIcon;
+    
+    
+    
+    
+    if (todo.isCompleted) {
+        
+        
+        NSMutableAttributedString *attTitle = [[NSMutableAttributedString alloc] initWithString:todo.title];
+        [attTitle addAttribute:NSStrikethroughStyleAttributeName
+                         value:@2
+                         range:NSMakeRange(0, [attTitle length])];
+        NSMutableAttributedString *attDescription = [[NSMutableAttributedString alloc] initWithString:todo.todoDescription];
+        [attDescription addAttribute:NSStrikethroughStyleAttributeName
+                         value:@2
+                         range:NSMakeRange(0, [attDescription length])];
+        
+        self.titleLabel.attributedText = attTitle;
+        self.descriptionLabel.attributedText = attDescription;
+        self.priorityLabel.text = @"";
+        
+        
+    } else {
+        self.titleLabel.text = todo.title;
+        self.descriptionLabel.text = todo.todoDescription;
+        self.priorityLabel.text = todo.priorityIcon;
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
