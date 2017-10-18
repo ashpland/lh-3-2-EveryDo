@@ -44,7 +44,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ %@ - %@ %@", self.checkbox, self.title, self.todoDescription, self.priorityIcon];
+    return [NSString stringWithFormat:@"%@ %@%@ - %@", self.checkbox, self.priorityIcon, self.title, self.todoDescription];
 }
 
 

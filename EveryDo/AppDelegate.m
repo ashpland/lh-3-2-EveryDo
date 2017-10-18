@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import "TodoManager.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    TodoManager *tdm = [TodoManager new];
+    
+    [tdm addSampleData];
+    
+    for (Todo *todo in tdm.todoList){
+        NSLog(@"%@", todo);
+    }
+    
+    
+    
+    
     return YES;
 }
 
